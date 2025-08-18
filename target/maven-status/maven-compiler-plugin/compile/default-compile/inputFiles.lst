@@ -1,0 +1,13 @@
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\controller\AdminController.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\controller\UserController.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\AdminDto.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\UserDto.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\EmailsystemadminApplication.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\entity\AdminEntity.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\entity\User.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\repository\AdminRepository.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\repository\UserRepository.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\service\AdminService.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\service\impl\AdminServiceImpl.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\service\impl\UserServiceImpl.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\service\UserService.java

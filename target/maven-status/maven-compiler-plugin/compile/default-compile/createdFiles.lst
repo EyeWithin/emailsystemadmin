@@ -1,0 +1,13 @@
+com\emailsystemadmin\entity\AdminEntity.class
+com\emailsystemadmin\service\impl\UserServiceImpl.class
+com\emailsystemadmin\service\impl\AdminServiceImpl.class
+com\emailsystemadmin\controller\UserController.class
+com\emailsystemadmin\repository\AdminRepository.class
+com\emailsystemadmin\controller\AdminController.class
+com\emailsystemadmin\entity\User.class
+com\emailsystemadmin\dto\UserDto.class
+com\emailsystemadmin\EmailsystemadminApplication.class
+com\emailsystemadmin\service\UserService.class
+com\emailsystemadmin\dto\AdminDto.class
+com\emailsystemadmin\service\AdminService.class
+com\emailsystemadmin\repository\UserRepository.class
