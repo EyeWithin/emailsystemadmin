@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.emailsystemadmin.dto.UserDTO;
+import com.emailsystemadmin.dto.UserResponseMsgDTO;
 import com.emailsystemadmin.service.UserService;
 
 import lombok.RequiredArgsConstructor;
@@ -21,12 +22,13 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/create")
-    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDto) {
-        return new ResponseEntity<>(userService.createUser(userDto), HttpStatus.CREATED);
+    public ResponseEntity<UserResponseMsgDTO> createUser(@RequestBody UserDTO userDto) {
+    	UserResponseMsgDTO response = userService.createUser(userDto);
+        return ResponseEntity.ok(response);
     }
 
     @PutMapping("updateById/{id}")
-    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody UserDTO userDto) {
+    public ResponseEntity<UserResponseMsgDTO> updateUser(@PathVariable Long id, @RequestBody UserDTO userDto) {
         return ResponseEntity.ok(userService.updateUser(id, userDto));
     }
 

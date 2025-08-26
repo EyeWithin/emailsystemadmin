@@ -6,8 +6,8 @@ com\emailsystemadmin\dto\UserResponseMsgDTO.class
 com\emailsystemadmin\controller\UserController.class
 com\emailsystemadmin\repository\AdminRepository.class
 com\emailsystemadmin\controller\AdminController.class
-com\emailsystemadmin\entity\User.class
 com\emailsystemadmin\EmailsystemadminApplication.class
+com\emailsystemadmin\entity\UserEntity.class
 com\emailsystemadmin\service\UserService.class
 com\emailsystemadmin\dto\AdminDTO.class
 com\emailsystemadmin\config\CorsConfig.class

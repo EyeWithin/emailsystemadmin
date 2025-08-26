@@ -7,7 +7,7 @@ F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\UserResponseMsgDTO.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\EmailsystemadminApplication.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\entity\AdminEntity.java
-F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\entity\User.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\entity\UserEntity.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\repository\AdminRepository.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\repository\UserRepository.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\service\AdminService.java
