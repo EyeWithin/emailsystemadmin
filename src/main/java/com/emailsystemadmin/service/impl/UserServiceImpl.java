@@ -7,7 +7,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.emailsystemadmin.dto.UserDto;
+import com.emailsystemadmin.dto.UserDTO;
 import com.emailsystemadmin.entity.User;
 import com.emailsystemadmin.repository.UserRepository;
 import com.emailsystemadmin.service.UserService;
@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public UserDto createUser(UserDto userDto) {
+    public UserDTO createUser(UserDTO userDto) {
         User user = new User();
         BeanUtils.copyProperties(userDto, user);
         User savedUser = userRepository.save(user);
@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto updateUser(Long id, UserDto userDto) {
+    public UserDTO updateUser(Long id, UserDTO userDto) {
         User existingUser = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
         BeanUtils.copyProperties(userDto, existingUser, "id");
@@ -41,20 +41,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto getUserById(Long id) {
+    public UserDTO getUserById(Long id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
-        UserDto userDto = new UserDto();
+        UserDTO userDto = new UserDTO();
         BeanUtils.copyProperties(user, userDto);
         return userDto;
     }
 
     @Override
-    public List<UserDto> getAllUsers() {
+    public List<UserDTO> getAllUsers() {
         List<User> users = userRepository.findAll();
         return users.stream()
                 .map(user -> {
-                    UserDto userDto = new UserDto();
+                    UserDTO userDto = new UserDTO();
                     BeanUtils.copyProperties(user, userDto);
                     return userDto;
                 })

@@ -7,18 +7,20 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.emailsystemadmin.dto.AdminDto;
+import com.emailsystemadmin.dto.AdminDTO;
+import com.emailsystemadmin.dto.AdminResponseMsgDTO;
 import com.emailsystemadmin.service.AdminService;
 
 import lombok.RequiredArgsConstructor;
 
 
 @RestController
-@RequestMapping("/api/users/admin")
+@RequestMapping("/api/admin")
 @RequiredArgsConstructor
 public class AdminController {
 	@Autowired
@@ -26,25 +28,42 @@ public class AdminController {
 	
 	
 	@PostMapping("/create")
-	public ResponseEntity<AdminDto> createAdmin(@RequestBody AdminDto adminDto) {
-		AdminDto createdAdmin = adminService.createAdmin(adminDto);
+	public ResponseEntity<AdminResponseMsgDTO> createAdmin(@RequestBody AdminDTO adminDto) {
+		AdminResponseMsgDTO createdAdmin = adminService.createAdmin(adminDto);
 		return ResponseEntity.ok(createdAdmin);
 		
 	}
 	
+	
+	   @PutMapping("updateById/{id}")
+	    public ResponseEntity<AdminResponseMsgDTO> updateAdmin(@PathVariable Long id,  @RequestBody AdminDTO adminDto) {
+		   AdminResponseMsgDTO updatedAdmin = adminService.updateAdmin(id, adminDto);
+	        return ResponseEntity.ok(updatedAdmin);
+	    }
+	
+	   
+	   @GetMapping("fetchById/{id}")
+	    public ResponseEntity<AdminDTO> getAdminById(@PathVariable Long id) {
+	        AdminDTO adminDto = adminService.GetAdminById(id);
+	        return ResponseEntity.ok(adminDto);
+	    }
+	
+	
+	   @PostMapping("/deleteById/{id}")
+	   public ResponseEntity<String> deleteAdmin(@PathVariable Long id) {       
+		   return ResponseEntity.ok(adminService.deleteAdmin(id));
+	   }
+	
+	
 	@GetMapping("/login/{username}/{password}")
-     public ResponseEntity<Boolean> loginAdmin(@PathVariable String username, @PathVariable String password) {
-		 boolean isAuthenticated = adminService.loginAdmin(username, password);
+     public ResponseEntity<AdminResponseMsgDTO> loginAdmin(@PathVariable String username, @PathVariable String password) {
+		AdminResponseMsgDTO isAuthenticated = adminService.loginAdmin(username, password);
 		 return ResponseEntity.ok(isAuthenticated);
 	 }
 	
-	
-	
-		// This class can be used to define admin-specific endpoints
-	// For example, you might want to add methods for managing user roles, permissions, etc.
 
 	 @GetMapping("/allAdmins")
-	 public ResponseEntity<List<AdminDto>> getAllAdmins() {
+	 public ResponseEntity<List<AdminDTO>> getAllAdmins() {
 	     return ResponseEntity.ok(adminService.getAllAdmins());
 	 }
 	 @GetMapping("/test")

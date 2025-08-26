@@ -2,14 +2,21 @@ package com.emailsystemadmin.service;
 
 import java.util.List;
 
-import com.emailsystemadmin.dto.AdminDto;
+import com.emailsystemadmin.dto.AdminDTO;
+import com.emailsystemadmin.dto.AdminResponseMsgDTO;
 
 public interface AdminService {
-	List<AdminDto> getAllAdmins();
+	List<AdminDTO> getAllAdmins();
 
-	AdminDto createAdmin(AdminDto adminDto);
+	AdminResponseMsgDTO createAdmin(AdminDTO adminDto);
 
-	boolean loginAdmin(String username, String password);
+	AdminResponseMsgDTO loginAdmin(String username, String password);
+
+	AdminResponseMsgDTO updateAdmin(Long id, AdminDTO adminDto);
+
+	AdminDTO GetAdminById(Long id);
+
+	String deleteAdmin(Long id);
 
 
 }

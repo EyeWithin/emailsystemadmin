@@ -8,4 +8,7 @@ public interface AdminRepository extends JpaRepository<AdminEntity, Long> {
 
 	AdminEntity findByUsernameAndPassword(String username, String password);
 
+	AdminEntity findByUsername(String username);
+
+	AdminEntity findById(long id);
 }

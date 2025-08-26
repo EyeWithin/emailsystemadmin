@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.emailsystemadmin.dto.UserDto;
+import com.emailsystemadmin.dto.UserDTO;
 import com.emailsystemadmin.service.UserService;
 
 import lombok.RequiredArgsConstructor;
@@ -21,22 +21,22 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/create")
-    public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto) {
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDto) {
         return new ResponseEntity<>(userService.createUser(userDto), HttpStatus.CREATED);
     }
 
     @PutMapping("updateById/{id}")
-    public ResponseEntity<UserDto> updateUser(@PathVariable Long id, @RequestBody UserDto userDto) {
+    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody UserDTO userDto) {
         return ResponseEntity.ok(userService.updateUser(id, userDto));
     }
 
     @GetMapping("fetchById/{id}")
-    public ResponseEntity<UserDto> getUserById(@PathVariable Long id) {
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) {
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
     @GetMapping("/allUsers")
-    public ResponseEntity<List<UserDto>> getAllUsers() {
+    public ResponseEntity<List<UserDTO>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 

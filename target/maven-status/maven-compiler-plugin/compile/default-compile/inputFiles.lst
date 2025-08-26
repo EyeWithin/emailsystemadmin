@@ -1,7 +1,10 @@
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\config\CorsConfig.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\controller\AdminController.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\controller\UserController.java
-F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\AdminDto.java
-F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\UserDto.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\AdminDTO.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\AdminResponseMsgDTO.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\UserDTO.java
+F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\dto\UserResponseMsgDTO.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\EmailsystemadminApplication.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\entity\AdminEntity.java
 F:\Desktop [Office]\Backend\emailsystemadmin\src\main\java\com\emailsystemadmin\entity\User.java
