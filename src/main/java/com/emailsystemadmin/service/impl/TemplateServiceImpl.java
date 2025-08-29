@@ -56,4 +56,12 @@ public class TemplateServiceImpl implements TemplateService {
 		return templateEntity.toString();
 	}
 
+
+
+	@Override
+	public Object getTemplatesNameList() {
+		List<TemplateEntity> templateEntity = templateRepository.findAll();
+		return templateEntity.stream().map(TemplateEntity::getTemplateName).toList();
+	}
+
 }

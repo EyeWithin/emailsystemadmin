@@ -9,4 +9,6 @@ public interface TemplateService {
 	Object getAllTemplates();
 	String getAllTemplateById(String name);
 
+	Object getTemplatesNameList();
+
 }

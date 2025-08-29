@@ -39,6 +39,11 @@ public class TemplateController {
 		return ResponseEntity.ok(templateService.getAllTemplates());
 	}
 
+	@GetMapping("/getNameList")
+	public ResponseEntity<?> getTemplatesNameList() {
+		return ResponseEntity.ok(templateService.getTemplatesNameList());
+	}
+
 	
 	@GetMapping("/getByName/{name}")
 	public ResponseEntity<String> getTemplateById(@PathVariable String name) {
