@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.emailsystemadmin.dto.EmailDTO;
 import com.emailsystemadmin.service.EmailService;
+import java.util.List;
 
 import lombok.RequiredArgsConstructor;
 
@@ -28,7 +29,11 @@ public class EmailController {
 		
 	}
 	
-	
+	@PostMapping("/sendBulkEmail")
+	public String sendBulkEmail(@RequestBody List<EmailDTO> emailListDto) {
+		return emailService.sendBulkEmail(emailListDto);
+		
+	}
 	
 	
 	
